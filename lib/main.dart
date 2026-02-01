@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:class_project_2/start_screen.dart';
 
 void main() {
-  runApp(const ClassProject2());
-}
-
-class ClassProject2 extends StatelessWidget {
-  const ClassProject2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-
-    );
+  runApp(MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [ Colors.deepPurpleAccent, Colors.blue, ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+                ),),
+          child: const StartScreen(),
+          ),
+        ),
+      ),);
   }
-}
-
-
