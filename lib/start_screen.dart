@@ -13,7 +13,10 @@ class StartScreen extends StatelessWidget {
         Text('Learn Flutter the fun way!', style: TextStyle(color: Colors.white, fontSize: 24),),
         const SizedBox(height: 30,),
         OutlinedButton.icon(style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
-          onPressed: () {}, icon: const Icon(Icons.play_arrow),label: const Text('Start Quiz'),),
+          onPressed: () {
+
+          }, icon: const Icon(Icons.play_arrow),
+          label: const Text('Start Quiz'),),
       ],
     ),
     );
