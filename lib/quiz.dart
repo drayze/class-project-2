@@ -17,7 +17,7 @@ class _QuizState extends State<Quiz> {
   @override
   void initState() {
     super.initState();
-    activeScreen = StartScreen(switchScreen, startQuiz: () {  },);
+    activeScreen = StartScreen(switchScreen);
   }
   void switchScreen() {
     setState(() {
