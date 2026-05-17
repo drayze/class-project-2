@@ -12,28 +12,37 @@ class QuestionsScreen  extends StatefulWidget {
   }
 }
 class _QuestionsScreen extends State<QuestionsScreen>{
+  var currentQuestionIndex = 0;
+
+  void answerQuestion(){
+    setState(() {
+      currentQuestionIndex++;
+    });
+  }
+
     @override
   Widget build(BuildContext context){
 
-      final currentQuestion = questions[0];
+      final currentQuestion = questions[currentQuestionIndex];
 
   return SizedBox(
     width: double.infinity,
     height: double.infinity,
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-       Text(currentQuestion.test, style: TextStyle(fontSize: 25,
-          fontWeight: FontWeight.bold, color: Colors.white),),
-        SizedBox(height: 30,),
-        AnswerButton(answerText: currentQuestion.answers[0], onTap: (){}),
-        SizedBox(height: 5,),
-        AnswerButton(answerText: currentQuestion.answers[1], onTap: (){}),
-        SizedBox(height: 5,),
-        AnswerButton(answerText: currentQuestion.answers[2], onTap: (){}),
-        SizedBox(height: 5,),
-        AnswerButton(answerText: currentQuestion.answers[3], onTap: (){}),
-      ],),
+    child: Container(
+      margin: EdgeInsets.all(40),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+         Text(currentQuestion.test, style: TextStyle(fontSize: 25,
+            fontWeight: FontWeight.bold, color: Colors.white),
+           textAlign: TextAlign.center,),
+          SizedBox(height: 30,),
+          ...currentQuestion.getShuffledAnswers().map((item) {
+            return AnswerButton(answerText: item, onTap: answerQuestion);
+          }),
+          ],),
+    ),
   );
   }
 }
