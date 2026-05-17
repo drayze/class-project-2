@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget{
-  const AnswerButton({super.key});
+  const AnswerButton(this.answerText, {super.key});
+
+  final String answerText;
 
   @override
   Widget build(BuildContext context){
     return ElevatedButton(onPressed: (){},
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.purpleAccent,),
-        child: const Text('test'));
+        child: Text(answerText));
   }
 }
