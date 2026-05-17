@@ -1,5 +1,3 @@
-
-
 class QuizQuestion {
   const QuizQuestion(this.test, this.answers);
 
