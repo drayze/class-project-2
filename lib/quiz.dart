@@ -30,7 +30,7 @@ class _QuizState extends State<Quiz> {
     Widget screenWidget = StartScreen(switchScreen);
 
     if (activeScreen is QuestionsScreen) {
-      screenWidget = const QuestionsScreen(chosenAnswer);
+      screenWidget = QuestionsScreen(onSelectedAnswer: chosenAnswer);
     }
     return MaterialApp(
       home: Scaffold(
