@@ -16,7 +16,8 @@ class QuestionsScreen  extends StatefulWidget {
 class _QuestionsScreen extends State<QuestionsScreen>{
   var currentQuestionIndex = 0;
 
-  void answerQuestion(){
+  void answerQuestion(String chosenAnswer){
+    widget.onSelectedAnswer(chosenAnswer);
     setState(() {
       currentQuestionIndex++;
     });
@@ -41,8 +42,11 @@ class _QuestionsScreen extends State<QuestionsScreen>{
             fontWeight: FontWeight.bold, color: Colors.white,),
            textAlign: TextAlign.center,),
           SizedBox(height: 30,),
-          ...currentQuestion.getShuffledAnswers().map((item) {
-            return AnswerButton(answerText: item, onTap: answerQuestion);
+          ...currentQuestion.getShuffledAnswers().map((answer) {
+            return AnswerButton(answerText: answer,
+                onTap: (){
+              answerQuestion(answer);
+                });
           }),
           ],),
     ),
