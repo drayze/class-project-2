@@ -11,12 +11,14 @@ class QuestionsSummary extends StatelessWidget{
       children: scoreData.map((data){
         return Row(children: [
           Text(((data['question_num'] as int) + 1).toString()),
-          Column(children: [
-            Text(data['question'] as String),
-            SizedBox(height: 5,),
-            Text(data['correct_answer'] as String),
-            Text(data['player_answer'] as String)
-          ],)
+          Expanded(
+            child: Column(children: [
+              Text(data['question'] as String),
+              SizedBox(height: 5,),
+              Text(data['correct_answer'] as String),
+              Text(data['player_answer'] as String)
+            ],),
+          )
         ],);
       }).toList(),
     );
