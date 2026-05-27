@@ -38,7 +38,7 @@ class _QuestionsScreen extends State<QuestionsScreen>{
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-         Text(currentQuestion.test, style: GoogleFonts.unkempt( fontSize: 25,
+         Text(currentQuestion.text, style: GoogleFonts.unkempt( fontSize: 25,
             fontWeight: FontWeight.bold, color: Colors.white,),
            textAlign: TextAlign.center,),
           SizedBox(height: 30,),
