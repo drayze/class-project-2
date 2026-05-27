@@ -13,12 +13,12 @@ class QuestionsSummary extends StatelessWidget{
           Text(((data['question_num'] as int) + 1).toString()),
           Expanded(
             child: Column(children: [
-              Text(data['question'] as String),
+              Text(data['question_text'] as String),
               SizedBox(height: 5,),
               Text(data['correct_answer'] as String),
               Text(data['player_answer'] as String)
             ],),
-          )
+          ),
         ],);
       }).toList(),
     );
