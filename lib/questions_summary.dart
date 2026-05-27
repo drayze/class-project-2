@@ -9,7 +9,9 @@ class QuestionsSummary extends StatelessWidget{
   Widget build(BuildContext context) {
     return Column(
       children: scoreData.map((data){
-        return Row(children: [],);
+        return Row(children: [
+          Text(((data['question_num'] as int) + 1).toString())
+        ],);
       }).toList(),
     );
   }
