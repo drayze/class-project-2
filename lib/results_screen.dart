@@ -35,8 +35,7 @@ class ResultsScreen extends StatelessWidget{
               style: GoogleFonts.unkempt(fontSize: 25,
               fontWeight: FontWeight.bold, color: Colors.white,),),
             SizedBox(height: 30,),
-            ListView(children: [
-            QuestionsSummary(getResults()),]),
+            QuestionsSummary(getResults()),
             SizedBox(height: 30,),
             TextButton(onPressed: (){
               
