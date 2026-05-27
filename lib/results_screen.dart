@@ -1,3 +1,4 @@
+import 'package:class_project_2/questions_summary.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:class_project_2/data/questions.dart';
@@ -34,7 +35,7 @@ class ResultsScreen extends StatelessWidget{
               style: GoogleFonts.unkempt(fontSize: 25,
               fontWeight: FontWeight.bold, color: Colors.white,),),
             SizedBox(height: 30,),
-            ListView(),
+            QuestionsSummary(getResults()),
             SizedBox(height: 30,),
             TextButton(onPressed: (){
               
