@@ -45,8 +45,11 @@ class ResultsScreen extends StatelessWidget{
                 SizedBox(height: 30,),
                 QuestionsSummary(results),
                 SizedBox(height: 30,),
-                TextButton(onPressed: (){
-                }, child: Text('Restart Quiz'))
+                TextButton.icon(onPressed: (){
+                }, icon: Icon(Icons.restart_alt, color: Colors.white,),
+                    label: Text('Restart Quiz', style: GoogleFonts.courierPrime(
+                      fontSize: 18, color: Colors.white
+                    ),),)
               ],
                   ),
           ),),
