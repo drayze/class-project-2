@@ -24,6 +24,8 @@ class ResultsScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    final results = getResults();
+
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -33,9 +35,10 @@ class ResultsScreen extends StatelessWidget{
           children: [
             Text('Your Quiz Results.\nYou answered x of z questions correctly.',
               style: GoogleFonts.unkempt(fontSize: 25,
-              fontWeight: FontWeight.bold, color: Colors.white,),),
+              fontWeight: FontWeight.bold, color: Colors.white,),
+              textAlign: TextAlign.center,),
             SizedBox(height: 30,),
-            QuestionsSummary(getResults()),
+            QuestionsSummary(results),
             SizedBox(height: 30,),
             TextButton(onPressed: (){
             }, child: Text('Restart Quiz'))
