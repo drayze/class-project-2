@@ -25,6 +25,10 @@ class ResultsScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final results = getResults();
+    final totalPossibleQuestions = questions.length;
+    final correctTotal = results.where((data){
+      return data['player_answer'] == data['correct_answer'];
+    });
 
     return SizedBox(
       width: double.infinity,
@@ -33,7 +37,8 @@ class ResultsScreen extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Your Quiz Results.\nYou answered x of z questions correctly.',
+            Text('Your Quiz Results.\nYou answered $correctTotal of '
+                '$totalPossibleQuestions questions correctly.',
               style: GoogleFonts.unkempt(fontSize: 25,
               fontWeight: FontWeight.bold, color: Colors.white,),
               textAlign: TextAlign.center,),
