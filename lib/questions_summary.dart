@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsSummary extends StatelessWidget{
   const QuestionsSummary(this.scoreData, {super.key});
@@ -10,13 +11,21 @@ class QuestionsSummary extends StatelessWidget{
     return Column(
       children: scoreData.map((data){
         return Row(children: [
-          Text(((data['question_num'] as int) + 1).toString()),
+          Text(((data['question_num'] as int) + 1).toString(), style: GoogleFonts.turretRoad(
+            fontSize: 25, color: Colors.lightGreenAccent, backgroundColor: Colors.black45,
+          ),),
           Expanded(
             child: Column(children: [
-              Text(data['question_text'] as String),
+              Text(data['question_text'] as String, style: GoogleFonts.turretRoad(
+                fontSize: 22, color: Colors.lightGreenAccent,
+              ),),
               SizedBox(height: 5,),
-              Text(data['correct_answer'] as String),
-              Text(data['player_answer'] as String)
+              Text(data['correct_answer'] as String, style: GoogleFonts.electrolize(
+                fontSize: 21, color: Colors.black54,
+              ),),
+              Text(data['player_answer'] as String, style: GoogleFonts.iceberg(
+                fontSize: 20, color: Colors.orangeAccent
+              ),)
             ],),
           ),
         ],);
