@@ -31,25 +31,25 @@ class ResultsScreen extends StatelessWidget{
     }).length;
 
     return SizedBox(
-      width: double.infinity,
-      child: Container(
-        margin: const EdgeInsets.all(40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Your Quiz Results.\nYou answered $correctTotal of '
-                '$totalPossibleQuestions questions correctly.',
-              style: GoogleFonts.unkempt(fontSize: 25,
-              fontWeight: FontWeight.bold, color: Colors.white,),
-              textAlign: TextAlign.center,),
-            SizedBox(height: 30,),
-            QuestionsSummary(results),
-            SizedBox(height: 30,),
-            TextButton(onPressed: (){
-            }, child: Text('Restart Quiz'))
-          ],
-        ),
-      ),
+      height: 300,
+      child: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.all(40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Your Quiz Results.\nYou answered $correctTotal of '
+                  '$totalPossibleQuestions questions correctly.',
+                style: GoogleFonts.unkempt(fontSize: 25,
+                fontWeight: FontWeight.bold, color: Colors.white,),
+                textAlign: TextAlign.center,),
+              SizedBox(height: 30,),
+              QuestionsSummary(results),
+              SizedBox(height: 30,),
+              TextButton(onPressed: (){
+              }, child: Text('Restart Quiz'))
+            ],
+      ),),),
     );
   }
 }
