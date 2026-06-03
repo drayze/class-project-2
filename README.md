@@ -1,11 +1,11 @@
 # class_project_2
 
-A new Flutter project.
+Building a Quiz Game
 
-## Getting Started
+## Details of this repo
+Written with Flutter.
 
-This project is a starting point for a Flutter application.
-
-Another project to improve my understanding. This is a quiz app
-Which the questions are based around Flutter itself.
-Taking another step in my journey.
+I built and implemented custom widgets for the results screen.  Along with 
+custom styling to the GUI throughout.  Another project to improve my craft.
+Building on the basics, getting stronger with repetition. 
+This is a quiz app, where the questions are based around Flutter itself.
