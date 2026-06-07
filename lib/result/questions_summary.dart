@@ -12,7 +12,7 @@ class QuestionsSummary extends StatelessWidget{
     return Column(
       children: scoreData.map((data){
         return Row(children: [
-          PlayersScore(isCorrect = data[]),
+
           Expanded(
             child: Column(children: [
               Text(data['question_text'] as String, style: GoogleFonts.turretRoad(
