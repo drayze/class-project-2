@@ -13,14 +13,20 @@ class PlayersScore extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
+    final questionIndex = questionNum + 1;
     return Container(
         height: 30,
         width: 30,
         alignment: Alignment.center,
-        decoration: BoxDecoration(),
-        child: Text((('question_num' as int) + 1).toString(), style: GoogleFonts.turretRoad(
-    fontSize: 25, color: Colors.lightGreenAccent, backgroundColor: Colors.black45,
+        decoration: BoxDecoration(
+          color: isCorrect
+              ? Colors.greenAccent
+              : Colors.deepOrangeAccent,
+          borderRadius: BorderRadius.all(Radius.circular(45.0)),
+        ),
+        child: Text(questionIndex.toString(),
+          style: GoogleFonts.turretRoad(
+          fontSize: 25, color: Colors.black,
     ),));
   }
   
