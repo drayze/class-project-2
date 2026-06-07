@@ -4,9 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:class_project_2/data/questions.dart';
 
 class ResultsScreen extends StatelessWidget{
-  const ResultsScreen({super.key, required this.chosenAnswers});
+  const ResultsScreen({super.key,
+    required this.chosenAnswers,
+    required this.restartQuiz});
 
   final List <String> chosenAnswers;
+  final void Function () restartQuiz;
 
   List <Map<String, Object>> getResults () {
     final List <Map<String, Object>> playerScore = [];
@@ -45,8 +48,8 @@ class ResultsScreen extends StatelessWidget{
                 SizedBox(height: 30,),
                 QuestionsSummary(results),
                 SizedBox(height: 30,),
-                TextButton.icon(onPressed: (){
-                }, icon: Icon(Icons.restart_alt, color: Colors.white,),
+                TextButton.icon(onPressed: restartQuiz,
+                  icon: Icon(Icons.restart_alt, color: Colors.white,),
                     label: Text('Restart Quiz', style: GoogleFonts.courierPrime(
                       fontSize: 18, color: Colors.white
                     ),),)

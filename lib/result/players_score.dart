@@ -26,7 +26,8 @@ class PlayersScore extends StatelessWidget{
         ),
         child: Text(questionIndex.toString(),
           style: GoogleFonts.turretRoad(
-          fontSize: 25, color: Colors.black,
+          fontSize: 25, fontWeight: FontWeight.bold,
+            color: Colors.black,
     ),));
   }
   
