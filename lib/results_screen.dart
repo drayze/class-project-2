@@ -1,4 +1,4 @@
-import 'package:class_project_2/questions_summary.dart';
+import 'package:class_project_2/result/questions_summary.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:class_project_2/data/questions.dart';
