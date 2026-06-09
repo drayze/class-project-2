@@ -17,6 +17,7 @@ class PlayersScore extends StatelessWidget{
     return Container(
         height: 30,
         width: 30,
+        padding: EdgeInsets.all(5),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: isCorrect

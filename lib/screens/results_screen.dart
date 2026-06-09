@@ -36,7 +36,6 @@ class ResultsScreen extends StatelessWidget{
     return SizedBox(
       child: Container(
           margin: const EdgeInsets.all(40),
-          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -55,7 +54,6 @@ class ResultsScreen extends StatelessWidget{
                     ),),)
               ],
                   ),
-          ),),
-    );
+          ),);
   }
 }
